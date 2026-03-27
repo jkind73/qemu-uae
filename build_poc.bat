@@ -1,0 +1,23 @@
+@echo off
+echo =======================================================
+echo QEMU-UAE 10.x Proof of Concept Build Script
+echo =======================================================
+echo This script requires MSYS2 (ucrt64) to be installed.
+echo If you have C:\msys64, it will attempt to configure and build.
+
+if not exist "C:\msys64\msys2_shell.cmd" (
+    echo [ERROR] MSYS2 not found at C:\msys64.
+    echo Please install MSYS2 from https://www.msys2.org/
+    pause
+    exit /b 1
+)
+
+echo [INFO] Launching MSYS2 UCRT64 environment to build QEMU...
+set MSYSTEM=UCRT64
+set MSYS2_PATH_TYPE=inherit
+C:\msys64\usr\bin\bash.exe -lc "cd /e/git/qemu-uae/qemu-latest && ./configure --target-list=ppc-softmmu && cd build && ninja"
+
+
+
+echo [INFO] Build finished. Check for qemu-system-ppc.exe
+pause

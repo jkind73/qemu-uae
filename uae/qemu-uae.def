@@ -1,0 +1,21 @@
+EXPORTS
+    ppc_cpu_init
+    qemu_uae_init
+    qemu_uae_lock
+    qemu_uae_main_loop_should_exit
+    qemu_uae_ppc_external_interrupt
+    qemu_uae_ppc_in_cpu_thread
+    qemu_uae_ppc_init
+    qemu_uae_start
+    qemu_uae_version
+    uae_log
+    uae_ppc_io_mem_read
+    uae_ppc_io_mem_read64
+    uae_ppc_io_mem_write
+    uae_ppc_io_mem_write64
+    uaeppc_get_version
+    uaeppc_init
+    uaeppc_reset
+    uaeppc_execute
+    uaeppc_shutdown
+    uaeppc_get_capabilities

@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.c.inc         diff=c
+*.h.inc         diff=c
+*.m             diff=objc
+*.py            diff=python
+*.rs            diff=rust
+*.rs.inc        diff=rust
+Cargo.lock      diff=toml merge=binary
+
+*.patch         -text -whitespace
